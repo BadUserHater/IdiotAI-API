@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 from collections import namedtuple
 import random
 
@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return '<h1>Idiot-AI API v0.1</h1><p>Welcome to the Idiot-AI API</p><p>IdiotAI ChatBot API is provided by Idiot Creature Hater Studios idiotcreaturehater.glitch.me</p>'
+    return render_template('index.html')
 
 
 @app.route('/api')
@@ -44,12 +44,25 @@ def generate_response(user_input: str) -> Response:
         return Response("YAAAAAAYYYYYY!", 1)
     elif lc_input == "no":
         return Response("*cries", 1)
+    elif lc_input == "nah":
+        return Response("*cries", 1)
     elif lc_input == "die":
         return Response("*cries", 1)
     elif lc_input == "potty":
         responses = ["*screams in fear",
                      "*cries",
                      "Im too scared of the potty"]
+        return Response(f"{random.choice(responses)}", 1)
+    elif lc_input == "what":
+        responses = ["I have no words",
+                     "Is that a trash bin?",
+                     "Its Toilet",
+                     "Its Shit and F==kers",]
+        return Response(f"{random.choice(responses)}", 1)
+    elif lc_input == "whats":
+        responses = ["I have no words",
+                     "Become a trash bin",
+                     "Be shit and f==kers"]
         return Response(f"{random.choice(responses)}", 1)
     elif lc_input == "stop":
         responses = ["NO",
@@ -69,12 +82,35 @@ def generate_response(user_input: str) -> Response:
                      "NO",
                      "MAYBE"]
         return Response(f"{random.choice(responses)}", 1)
+    elif lc_input == "do":
+        responses = ["YES",
+                     "NO",
+                     "MAYBE"]
+        return Response(f"{random.choice(responses)}", 1)
     elif lc_input == "does":
-        responses = ["My brain does not have brain signal to understand that.",
+        responses = ["YES",
+                     "NO",
+                     "MAYBE",
+                     "My brain does not have brain signal to understand that.",
                      "I have no clue"]
+        return Response(f"{random.choice(responses)}", 1)
+    elif lc_input == "are":
+        responses = ["YES",
+                     "NO",
+                     "MAYBE",
+                     "I have no clue"]
+        return Response(f"{random.choice(responses)}", 1)
+    elif lc_input == "my":
+        responses = ["*cries",
+                     "Its Shit and F=ckers",]
         return Response(f"{random.choice(responses)}", 1)
     elif lc_input == "why":
         return Response("I have no clue", 1)
+    elif lc_input == "who":
+        responses = ["Its a Trash can",
+                     "Its a Toilet",
+                     "Its Shit and F==kers",]
+        return Response(f"{random.choice(responses)}", 1)
     elif lc_input == "stay":
         return Response("I do not want to stay in this crappy place.", 1)
     elif lc_input == "summon":
@@ -87,6 +123,10 @@ def generate_response(user_input: str) -> Response:
         return Response(f"{random.choice(responses)}", 1)
     elif lc_input == "answer":
         return Response("NO", 1)
+    elif lc_input == "fuck":
+        return Response("*cries", 1)
+    elif lc_input == "stfu":
+        return Response("*cries", 1)
     elif lc_input == "cum":
         return Response("My brain does not have brain signal to understand that.", 1)
     elif lc_input == "sex":
@@ -119,10 +159,10 @@ def generate_response(user_input: str) -> Response:
         return Response("*pees my pants", 1)
     elif lc_input == "sing":
         responses = ["Bah Bah Pink Sh!t have you any trash? Yes sir Yes sir 3 weeds full",
-                     "I kinda look like a shit from my bottom to my top, I don't have any friends now f&ck me in the air....",
                      "I'm a stupid piece of sh!t short and spout. Here is my handle and here is my trash",
-                     "I'm a bin I'm a bin, Over here and over there... "
-                     "MOOOOOOOOOOOOOOOO!",]
+                     "MOOOOOOOOOOOOOOOO!",
+                     "I'm a bin I'm a bin, Over here and over there....",
+                     "I kinda look like a shit from my bottom to my top, I don't have any friends now f&ck me in the air....",]
         return Response(f"{random.choice(responses)}", 1)
     else:
         return Response("I am too stupid to understand what you are saying", 0)
