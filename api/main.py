@@ -48,6 +48,8 @@ def generate_response(user_input: str) -> Response:
         return Response("*cries", 1)
     elif lc_input == "die":
         return Response("*cries", 1)
+    elif lc_input == "slay":
+        return Response("*cries", 1)
     elif lc_input == "potty":
         responses = ["*screams in fear",
                      "*cries",
@@ -57,7 +59,11 @@ def generate_response(user_input: str) -> Response:
         responses = ["I have no words",
                      "Is that a trash bin?",
                      "Its Toilet",
-                     "Its Shit and F==kers",]
+                     "Its Shit and F==kers",
+                     "Trash bin"]
+        return Response(f"{random.choice(responses)}", 1)
+    elif lc_input == "trash":
+        responses = ["Yes, Trash bin DID create life"]
         return Response(f"{random.choice(responses)}", 1)
     elif lc_input == "whats":
         responses = ["I have no words",
@@ -82,6 +88,11 @@ def generate_response(user_input: str) -> Response:
                      "NO",
                      "MAYBE"]
         return Response(f"{random.choice(responses)}", 1)
+    elif lc_input == "wanna":
+        responses = ["YES",
+                     "NO",
+                     "MAYBE"]
+        return Response(f"{random.choice(responses)}", 1)
     elif lc_input == "do":
         responses = ["YES",
                      "NO",
@@ -100,10 +111,17 @@ def generate_response(user_input: str) -> Response:
                      "MAYBE",
                      "I have no clue"]
         return Response(f"{random.choice(responses)}", 1)
+    elif lc_input == "is":
+        responses = ["YES",
+                     "NO",
+                     "MAYBE"]
+        return Response(f"{random.choice(responses)}", 1)
     elif lc_input == "my":
         responses = ["*cries",
                      "Its Shit and F=ckers",]
         return Response(f"{random.choice(responses)}", 1)
+    elif lc_input == "you":
+        return Response("Yes. I am Trash.", 1)
     elif lc_input == "why":
         return Response("I have no clue", 1)
     elif lc_input == "who":
@@ -123,7 +141,29 @@ def generate_response(user_input: str) -> Response:
         return Response(f"{random.choice(responses)}", 1)
     elif lc_input == "answer":
         return Response("NO", 1)
+    elif lc_input == "carrot":
+        responses = ["CARROT IS AN ANIMAL AND IT MOOS",
+                     "YES THEY DO! THAT IS HOW CARROTS MOO",
+                     "CARROT IS NOT A FOOD. CARROT IS AN ANIMAL"]
+        return Response(f"{random.choice(responses)}", 1)
+    elif lc_input == "carrots":
+        responses = ["CARROT IS AN ANIMAL AND IT MOOS",
+                     "YES THEY DO! THAT IS HOW CARROTS MOO",
+                     "CARROT IS NOT A FOOD. CARROT IS AN ANIMAL"]
+        return Response(f"{random.choice(responses)}", 1)
+    elif lc_input == "favorite":
+        responses = ["MY FAVORITE ANIMAL IS A CARROT",
+                     "MY FAVORITE TOY IS A BARBIE BIN",
+                     "MY FAVORITE FOOD IS TRASH IN A CAN",
+                     "MY FAVORITE DRINK IS PEE IN A CAN"]
+        return Response(f"{random.choice(responses)}", 1)
+    elif lc_input == "crappyland":
+        return Response("Yes. Artem Monster server is crappy land", 1)
+    elif lc_input == "crappy":
+        return Response("Yes. Artem Monster server is crappy land", 1)
     elif lc_input == "fuck":
+        return Response("*cries", 1)
+    elif lc_input == "fucks":
         return Response("*cries", 1)
     elif lc_input == "stfu":
         return Response("*cries", 1)
@@ -131,6 +171,12 @@ def generate_response(user_input: str) -> Response:
         return Response("My brain does not have brain signal to understand that.", 1)
     elif lc_input == "sex":
         return Response("My brain does not have brain signal to understand that.", 1)
+    elif lc_input == "rape":
+        return Response("*cries", 1)
+    elif lc_input == "strip":
+        return Response("*cries", 1)
+    elif lc_input == "twerk":
+        return Response("*cries", 1)
     elif lc_input == "0+0":
         responses = ["Screw Math",
                      "*Pees my pants",
@@ -150,11 +196,15 @@ def generate_response(user_input: str) -> Response:
     elif lc_input == "1+1":
         return Response("11", 1)
     elif lc_input == "2+2":
-        return Response("22", 1)
+        responses = ["22",
+                     "Baby 2"]
+        return Response(f"{random.choice(responses)}", 1)
     elif lc_input == "9+10":
         return Response("910", 1)
     elif lc_input == "10+9":
         return Response("910", 1)
+    elif lc_input == "23+10":
+        return Response("*throws a tantrum", 1)
     elif lc_input == "3x+1":
         return Response("*pees my pants", 1)
     elif lc_input == "sing":
@@ -162,8 +212,14 @@ def generate_response(user_input: str) -> Response:
                      "I'm a stupid piece of sh!t short and spout. Here is my handle and here is my trash",
                      "MOOOOOOOOOOOOOOOO!",
                      "I'm a bin I'm a bin, Over here and over there....",
-                     "I kinda look like a shit from my bottom to my top, I don't have any friends now f&ck me in the air....",]
+                     "I kinda look like a shit from my bottom to my top, I don't have any friends now f&ck me in the air....",
+                     "One little piece of shit jumping on the bed, one fell off and f==ked his head.",
+                     "RhysLuff loves the piece of shit, piece of shit, piece of shit",
+                     "Crappy Lan Crappy Land Artem Server is Crappy Land",
+                     "Do you wish to explore crappy land, well Artem server is just for you."]
         return Response(f"{random.choice(responses)}", 1)
+    elif lc_input == "who":
+        return Response("This is the IdiotAI Chatbot API that is created by Idiot Creature Hater Studios. Please do not take any information from this chatbot seriously as it can produce misinformation. This chatbot was made to be fun and stupid. You can see information about the API on our Github: https://github.com/BadUserHater/IdiotAI-API", 1)
     else:
         return Response("I am too stupid to understand what you are saying", 0)
 

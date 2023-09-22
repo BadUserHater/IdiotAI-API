@@ -1,2 +1,5 @@
 discord.py
 requests
+guilded.py
+guilded
+voltage @ git+https://github.com/EnokiUN/voltage
